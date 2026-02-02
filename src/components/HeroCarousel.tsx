@@ -202,24 +202,24 @@ const HeroCarousel = () => {
 			</div>
 
 			{/* Navigation améliorée */}
-			<div className="absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 gap-4 lg:left-auto lg:right-12 lg:translate-x-0">
+			<div className="absolute bottom-12 left-1/2 z-20 flex -translate-x-1/2 gap-4 lg:left-auto lg:right-12 lg:translate-x-0">
 				<motion.button
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.9 }}
 					onClick={prevSlide}
-					className="flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all hover:border-orange-500 hover:bg-orange-500"
+					className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all hover:border-orange-500 hover:bg-orange-500"
 					aria-label="Diapositive précédente"
 				>
-					<ChevronLeft className="h-6 w-6 text-white" />
+					<ChevronLeft className="h-5 w-5 text-white" />
 				</motion.button>
 				<motion.button
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.9 }}
 					onClick={nextSlide}
-					className="flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all hover:border-orange-500 hover:bg-orange-500"
+					className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all hover:border-orange-500 hover:bg-orange-500"
 					aria-label="Diapositive suivante"
 				>
-					<ChevronRight className="h-6 w-6 text-white" />
+					<ChevronRight className="h-5 w-5 text-white" />
 				</motion.button>
 			</div>
 
