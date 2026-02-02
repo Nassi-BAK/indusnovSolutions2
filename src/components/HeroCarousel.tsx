@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { Link as ScrollLink } from 'react-scroll';
 import hero1 from '../assets/hero-1.jpg';
 import hero2 from '../assets/hero-2.jpg';
 import hero3 from '../assets/hero-3.jpg';
@@ -182,20 +183,27 @@ const HeroCarousel = () => {
 							</motion.p>
 
 							{/* Bouton CTA amélioré */}
-							<motion.button
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.7 }}
-								whileHover={{ scale: 1.05 }}
-								whileTap={{ scale: 0.95 }}
-								className="group relative overflow-hidden rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 font-semibold text-white shadow-lg shadow-orange-500/30 transition-all hover:shadow-xl hover:shadow-orange-500/40"
+							<ScrollLink
+								to="services"
+								smooth={true}
+								duration={500}
+								className="inline-flex cursor-pointer"
 							>
-								<span className="relative z-10 flex items-center gap-2">
-									{currentSlideData.ctaText}
-									<ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-								</span>
-								<div className="absolute inset-0 -z-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 transition-opacity group-hover:opacity-100" />
-							</motion.button>
+								<motion.button
+									initial={{ opacity: 0, y: 20 }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{ delay: 0.7 }}
+									whileHover={{ scale: 1.05 }}
+									whileTap={{ scale: 0.95 }}
+									className="group relative overflow-hidden rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 font-semibold text-white shadow-lg shadow-orange-500/30 transition-all hover:shadow-xl hover:shadow-orange-500/40"
+								>
+									<span className="relative z-10 flex items-center gap-2">
+										{currentSlideData.ctaText}
+										<ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+									</span>
+									<div className="absolute inset-0 -z-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 transition-opacity group-hover:opacity-100" />
+								</motion.button>
+							</ScrollLink>
 						</motion.div>
 					</AnimatePresence>
 				</div>

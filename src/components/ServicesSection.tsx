@@ -111,7 +111,7 @@ const ServicesSectionWithPopup = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32">
+    <section id="services" className="bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
