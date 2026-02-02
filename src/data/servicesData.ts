@@ -1,3 +1,10 @@
+import drontech from '../assets/services/drontech.png';
+import aquascope from '../assets/services/aquascope.png';
+import ecoscan from '../assets/services/ecoscan.png';
+import predictech from '../assets/services/predictech.png';
+import skillnov from '../assets/services/skillnov.png';
+import smartflow from '../assets/services/smartflow.png';
+
 export interface Service {
   id: string;
   title: string;
@@ -32,7 +39,7 @@ export const servicesData: Service[] = [
       'Précis',
       'Sécurité améliorée'
     ],
-    image: '/src/assets/services/drontech.png'
+    image: drontech
   },
   {
     id: 'aquascope',
@@ -55,7 +62,7 @@ export const servicesData: Service[] = [
       'Haute résolution',
       'Rapports détaillés'
     ],
-    image: '/src/assets/services/aquascope.png'
+    image: aquascope
   },
   {
     id: 'ecoscan',
@@ -78,7 +85,7 @@ export const servicesData: Service[] = [
       'Capteurs IoT',
       'Analyse complète'
     ],
-    image: '/src/assets/services/ecoscan.png'
+    image: ecoscan
   },
   {
     id: 'predictech',
@@ -101,7 +108,7 @@ export const servicesData: Service[] = [
       'Capteurs IoT',
       'Temps réel'
     ],
-    image: '/src/assets/services/predictech.png'
+    image: predictech
   },
   {
     id: 'skillnov',
@@ -124,7 +131,7 @@ export const servicesData: Service[] = [
       'Formatrices experts',
       'Certification'
     ],
-    image: '/src/assets/services/skillnov.png'
+    image: skillnov
   },
   {
     id: 'smartflow',
@@ -147,7 +154,7 @@ export const servicesData: Service[] = [
       'Dashboards en temps réel',
       'Automatisation intelligente'
     ],
-    image: '/src/assets/services/smartflow.png'
+    image: smartflow
   }
 ];
 
