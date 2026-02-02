@@ -1,0 +1,128 @@
+{
+  "drontech": {
+    "title": "DronTech",
+    "subtitle": "Advanced Aerial Inspections",
+    "description": "Drone inspection solutions",
+    "fullDescription": "DronTech provides complete drone inspections for your industrial installations and buildings. Drones capture high-resolution images and provide detailed reports to facilitate maintenance and safety.",
+    "objectives": [
+      "Fast inspection",
+      "Early problem detection",
+      "Maintenance optimization"
+    ],
+    "keyAdvantages": [
+      "Time savings",
+      "Cost reduction",
+      "Enhanced safety"
+    ],
+    "characteristics": [
+      "Fast",
+      "Accurate",
+      "Improved safety"
+    ]
+  },
+  "aquascope": {
+    "title": "AquaScope",
+    "subtitle": "Underwater Inspections",
+    "description": "Advanced underwater inspection solutions with ROVs",
+    "fullDescription": "AquaScope performs detailed underwater inspections for port and aquatic facilities. Our equipment enables precise control even in hard-to-reach areas.",
+    "objectives": [
+      "Underwater surveillance",
+      "Leak or corrosion detection",
+      "Proactive maintenance"
+    ],
+    "keyAdvantages": [
+      "Access to inaccessible areas",
+      "Precise and detailed data",
+      "Optimal safety"
+    ],
+    "characteristics": [
+      "Advanced ROV technology",
+      "High resolution",
+      "Detailed report"
+    ]
+  },
+  "ecoscan": {
+    "title": "EcoScan",
+    "subtitle": "Intelligent Energy Audit",
+    "description": "Complete energy audits with thermography and IoT",
+    "fullDescription": "EcoScan conducts complete energy audits of your facilities. Thermal leak detection, energy consumption analysis and ESG compliance for sustainable industry.",
+    "objectives": [
+      "Energy consumption analysis",
+      "Optimization report",
+      "Specialized technical advice"
+    ],
+    "keyAdvantages": [
+      "Reduced consumption",
+      "ESG compliance",
+      "Energy savings"
+    ],
+    "characteristics": [
+      "Infrared thermography",
+      "IoT sensors",
+      "Complete analysis"
+    ]
+  },
+  "predictech": {
+    "title": "PredicTech",
+    "subtitle": "Predictive Maintenance 4.0",
+    "description": "Intelligent predictive maintenance based on AI and IoT",
+    "fullDescription": "PredicTech uses artificial intelligence and IoT sensors to predict equipment failures. Anticipate breakdowns, reduce costs and optimize maintenance with our technology partners.",
+    "objectives": [
+      "Continuous equipment monitoring",
+      "Early automatic alerts",
+      "Optimized maintenance reports"
+    ],
+    "keyAdvantages": [
+      "Failure prevention",
+      "Cost reduction",
+      "Maximum availability"
+    ],
+    "characteristics": [
+      "Predictive AI",
+      "IoT sensors",
+      "Real-time"
+    ]
+  },
+  "skillnov": {
+    "title": "SkilNov",
+    "subtitle": "Training and Innovation",
+    "description": "Innovative technical training programs",
+    "fullDescription": "SkilNov offers innovative technical training programs to develop your team's expertise. Practical workshops, online courses and professional certifications.",
+    "objectives": [
+      "Skills development",
+      "Technology transfer",
+      "Operational innovation"
+    ],
+    "keyAdvantages": [
+      "Updated expertise",
+      "Recognized certifications",
+      "Continuous support"
+    ],
+    "characteristics": [
+      "Updated content",
+      "Expert trainers",
+      "Certification"
+    ]
+  },
+  "smartflow": {
+    "title": "SmartFlow",
+    "subtitle": "Industrial Automation",
+    "description": "Automation and process optimization solutions",
+    "fullDescription": "SmartFlow optimizes your industrial processes with intelligent automation. Robotic management, real-time dashboards and continuous optimization for maximum performance.",
+    "objectives": [
+      "Process optimization",
+      "Integrated robotic management",
+      "Real-time dashboards"
+    ],
+    "keyAdvantages": [
+      "Increased productivity",
+      "Reduced costs",
+      "Improved quality"
+    ],
+    "characteristics": [
+      "Robotic integration",
+      "Real-time dashboards",
+      "Intelligent automation"
+    ]
+  }
+}

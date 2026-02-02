@@ -1,14 +1,36 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Check, Zap, Target, Lightbulb } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Chatbot from '@/components/Chatbot';
 import { getServiceById, servicesData } from '@/data/servicesData';
+import servicesEn from '@/i18n/services.en.json';
+import servicesFr from '@/i18n/services.fr.json';
 
 const ServiceDetail = () => {
   const params = useParams<{ serviceId?: string }>();
+  const { i18n } = useTranslation();
+  const navigate = useNavigate();
   const serviceId = params.serviceId?.toLowerCase();
+
+  // Handle quote button click - navigate to home and scroll to contact
+  const handleQuoteClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      const contactElement = document.getElementById('contact');
+      if (contactElement) {
+        contactElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  // Get service translations based on current language
+  const getServiceTranslations = (id: string) => {
+    const translations = i18n.language === 'fr' ? servicesFr : servicesEn;
+    return translations[id as keyof typeof translations] || null;
+  };
 
   if (!serviceId) {
     return (
@@ -19,6 +41,7 @@ const ServiceDetail = () => {
   }
 
   const service = getServiceById(serviceId);
+  const serviceTranslations = getServiceTranslations(serviceId);
 
   if (!service) {
     return (
@@ -33,6 +56,8 @@ const ServiceDetail = () => {
     );
   }
 
+  // Use translated data if available, otherwise fall back to original data
+  const displayData = serviceTranslations || service;
   const otherServices = servicesData.filter((s) => s.id !== serviceId).slice(0, 4);
 
   return (
@@ -90,10 +115,10 @@ const ServiceDetail = () => {
                     transition={{ duration: 0.7, delay: 0.2 }}
                   >
                     <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter text-white mb-6 leading-tight">
-                      {service.title}
+                      {displayData.title}
                     </h1>
                     <p className="mt-8 text-2xl text-slate-200 leading-relaxed max-w-2xl font-light">
-                      {service.subtitle}
+                      {displayData.subtitle}
                     </p>
                     
                     {/* Quick Stats */}
@@ -126,7 +151,7 @@ const ServiceDetail = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-orange-400/5 to-orange-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         <img 
                           src={service.image} 
-                          alt={service.title}
+                          alt={displayData.title}
                           className="relative h-64 w-64 object-contain drop-shadow-xl group-hover:scale-110 transition-transform duration-300"
                         />
                       </div>
@@ -162,7 +187,7 @@ const ServiceDetail = () => {
                   Description
                 </h2>
                 <p className="text-lg leading-relaxed text-gray-700 bg-gradient-to-br from-orange-50/50 to-transparent rounded-2xl p-8 border-l-4 border-orange-500">
-                  {service.fullDescription}
+                  {displayData.fullDescription}
                 </p>
               </motion.div>
 
@@ -182,7 +207,7 @@ const ServiceDetail = () => {
                   </h2>
                 </div>
                 <ul className="space-y-4 grid sm:grid-cols-2 gap-4">
-                  {service.objectives.map((objective, index) => (
+                  {displayData.objectives.map((objective, index) => (
                     <motion.li
                       key={objective}
                       initial={{ opacity: 0, x: -30 }}
@@ -216,7 +241,7 @@ const ServiceDetail = () => {
                   </h2>
                 </div>
                 <div className="grid gap-6 sm:grid-cols-3">
-                  {service.keyAdvantages.map((advantage, index) => (
+                  {displayData.keyAdvantages.map((advantage, index) => (
                     <motion.div
                       key={advantage}
                       initial={{ opacity: 0, scale: 0.8 }}
@@ -248,7 +273,7 @@ const ServiceDetail = () => {
                   Caractéristiques
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {service.characteristics.map((characteristic, index) => (
+                  {displayData.characteristics.map((characteristic, index) => (
                     <motion.div
                       key={characteristic}
                       initial={{ opacity: 0, y: 20 }}
@@ -282,15 +307,15 @@ const ServiceDetail = () => {
                   Prêt à commencer ?
                 </h3>
                 <p className="mb-8 text-gray-700 leading-relaxed">
-                  Contactez-nous pour une consultation gratuite et découvrez comment <strong className="text-orange-600">{service.title}</strong> peut transformer votre entreprise.
+                  Contactez-nous pour une consultation gratuite et découvrez comment <strong className="text-orange-600">{displayData.title}</strong> peut transformer votre entreprise.
                 </p>
-                <Link
-                  to="/#contact"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
+                <button
+                  onClick={handleQuoteClick}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                 >
                   <span>Demander un devis</span>
                   <ArrowLeft className="h-5 w-5 rotate-180" />
-                </Link>
+                </button>
 
                 {/* Other Services */}
                 {otherServices.length > 0 && (

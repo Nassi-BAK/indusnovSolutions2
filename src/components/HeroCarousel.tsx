@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Link as ScrollLink } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 import hero1 from '../assets/hero-1.jpg';
 import hero2 from '../assets/hero-2.jpg';
 import hero3 from '../assets/hero-3.jpg';
@@ -12,41 +13,42 @@ const slides = [
 	{
 		id: 1,
 		image: hero1,
-		title: 'Inspection technique & maintenance prédictive 4.0',
-		subtitle: 'Drones, ROV & IoT pour sécuriser, optimiser et décarboner vos actifs industriels',
-		ctaText: 'Découvrir nos solutions',
+		titleKey: 'hero.slides.0.title',
+		subtitleKey: 'hero.slides.0.subtitle',
+		ctaTextKey: 'hero.cta.services',
 	},
 	{
 		id: 2,
 		image: hero2,
-		title: "Voir l'invisible. Inspecter l'inaccessible.",
-		subtitle: 'Inspections par drones thermographiques & ROV : ports, énergie, lignes HT, silos, pipelines, offshore',
-		ctaText: 'Voir les cas d\'usage',
+		titleKey: 'hero.slides.1.title',
+		subtitleKey: 'hero.slides.1.subtitle',
+		ctaTextKey: 'hero.cta.services',
 	},
 	{
 		id: 3,
 		image: hero3,
-		title: 'Anticipez les pannes. Réduisez les coûts.',
-		subtitle: 'Maintenance prédictive, vibration, thermographie & IoT avec des partenaires technologiques internationaux',
-		ctaText: 'Parler à un expert',
+		titleKey: 'hero.slides.2.title',
+		subtitleKey: 'hero.slides.2.subtitle',
+		ctaTextKey: 'hero.cta.services',
 	},
 	{
 		id: 4,
 		image: hero4,
-		title: 'Performance énergétique & industrie durable',
-		subtitle: 'Audits énergétiques, détection de fuites, efficacité énergétique & conformité ESG',
-		ctaText: 'Optimiser ma consommation',
+		titleKey: 'hero.slides.2.title',
+		subtitleKey: 'hero.slides.2.subtitle',
+		ctaTextKey: 'hero.cta.services',
 	},
 	{
 		id: 5,
 		image: hero5,
-		title: 'Ils nous font confiance',
-		subtitle: 'Synox · APEBI · CDD · Technopark · partenaires technologiques',
-		ctaText: 'Nous contacter',
+		titleKey: 'hero.slides.2.title',
+		subtitleKey: 'hero.slides.2.subtitle',
+		ctaTextKey: 'hero.cta.services',
 	},
 ];
 
 const HeroCarousel = () => {
+	const { t } = useTranslation();
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const [direction, setDirection] = useState(0);
 
@@ -151,7 +153,7 @@ const HeroCarousel = () => {
 								transition={{ delay: 0.3, duration: 0.6 }}
 								className="mb-6 text-5xl font-bold leading-tight text-white lg:text-7xl"
 							>
-								{currentSlideData.title.split(' ').map((word, i) => (
+								{t(currentSlideData.titleKey).split(' ').map((word, i) => (
 									<motion.span
 										key={i}
 										initial={{ opacity: 0, y: 20 }}
@@ -179,7 +181,7 @@ const HeroCarousel = () => {
 								transition={{ delay: 0.6 }}
 								className="mb-10 max-w-2xl text-lg leading-relaxed text-slate-300 lg:text-xl"
 							>
-								{currentSlideData.subtitle}
+								{t(currentSlideData.subtitleKey)}
 							</motion.p>
 
 							{/* Bouton CTA amélioré */}
@@ -198,7 +200,7 @@ const HeroCarousel = () => {
 									className="group relative overflow-hidden rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 font-semibold text-white shadow-lg shadow-orange-500/30 transition-all hover:shadow-xl hover:shadow-orange-500/40"
 								>
 									<span className="relative z-10 flex items-center gap-2">
-										{currentSlideData.ctaText}
+										{t(currentSlideData.ctaTextKey)}
 										<ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
 									</span>
 									<div className="absolute inset-0 -z-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 transition-opacity group-hover:opacity-100" />
