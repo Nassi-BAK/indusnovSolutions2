@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import HeroCarousel from '@/components/HeroCarousel';
 import ServicesSection from '@/components/ServicesSection';
 import AboutSection from '@/components/AboutSection';
+import ClientLogosScroll from '@/components/ClientLogosScroll';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import Chatbot from '@/components/Chatbot';
@@ -14,6 +15,7 @@ const Index = () => {
       <main>
         <HeroCarousel />
         <ServicesSection />
+        <ClientLogosScroll />
         <AboutSection />
         <ContactSection />
       </main>

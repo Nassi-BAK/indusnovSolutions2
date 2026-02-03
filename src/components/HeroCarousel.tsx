@@ -105,7 +105,7 @@ const HeroCarousel = () => {
 				>
 					<img
 						src={currentSlideData.image}
-						alt={currentSlideData.title}
+						alt={t(currentSlideData.titleKey)}
 						className="h-full w-full object-cover brightness-110 contrast-105"
 					/>
 					{/* Overlay dégradé optimisé pour clarté */}
