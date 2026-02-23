@@ -89,24 +89,28 @@ export const servicesData: Service[] = [
   },
   {
     id: 'predictech',
-    title: 'PredicTech',
-    subtitle: 'Maintenance prédictive 4.0',
-    description: 'Maintenance prédictive intelligente basée sur l\'IA et IoT',
-    fullDescription: 'PredicTech utilise l\'intelligence artificielle et les capteurs IoT pour prédire les défaillances équipements. Anticipez les pannes, réduisez les coûts et optimisez la maintenance avec nos partenaires technologiques.',
+    title: 'PredicTor',
+    subtitle: 'Predictive Maintenance & Condition Monitoring',
+    description: 'PredicTor improves equipment reliability through advanced condition monitoring and predictive maintenance solutions. By continuously analyzing machine behavior, we detect early anomalies and prevent failures before they disrupt production.',
+    fullDescription: 'We deploy vibration monitoring, diagnostic analysis, and asset health evaluation aligned with Industry 4.0 maintenance methodologies. Data collected from equipment allows proactive maintenance planning and optimized intervention scheduling.',
     objectives: [
-      'Surveillance équipement continu',
-      'Alertes automatiques précoces',
-      'Rapports de maintenance optimisés'
+      'Anticipate equipment failures before breakdowns',
+      'Improve reliability of rotating equipment',
+      'Reduce maintenance costs and emergency interventions',
+      'Extend asset lifecycle'
     ],
     keyAdvantages: [
-      'Prévention des pannes',
-      'Réduction des coûts',
-      'Disponibilité maximale'
+      'Up to 40% reduction in unplanned downtime',
+      '25–30% decrease in corrective maintenance costs',
+      'Early detection of failures weeks before breakdown',
+      '15–20% increase in equipment availability'
     ],
     characteristics: [
-      'IA prédictive',
-      'Capteurs IoT',
-      'Temps réel'
+      'Vibration analysis & diagnostics',
+      'Rotating equipment monitoring',
+      'Predictive maintenance implementation',
+      'Root cause failure analysis',
+      'Asset health reporting'
     ],
     image: predictech
   },

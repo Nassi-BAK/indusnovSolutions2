@@ -27,6 +27,193 @@
       "quote": "Request a Quote"
     }
   },
+  "technologyPartnerships": {
+    "badge": "Technology Partnerships",
+    "title": "Strategic Alliances for",
+    "titleHighlight": "Predictive Maintenance",
+    "description": "Our predictive maintenance approach combines connectivity, machine diagnostics, and industrial data intelligence through a carefully selected ecosystem of global technology partners — turning industrial assets into connected, intelligent systems.",
+    "cta": "Explore Our Ecosystem",
+    "stackLabel": "+ Indusnov Decision Layer",
+    "partners": {
+      "synox": {
+        "name": "Synox",
+        "role": "Connectivity",
+        "layer": "Connectivity Layer",
+        "tagline": "Enabling Connected Industrial Assets",
+        "description": "Connectivity is the foundation of predictive maintenance. Through our partnership with Synox, industrial equipment becomes continuously connected and capable of transmitting operational data in real time.",
+        "details": "Synox Industrial IoT platforms allow us to deploy connected sensors and monitoring infrastructures that collect critical parameters such as energy consumption, environmental conditions, and operational performance.",
+        "benefit": "Continuous visibility over assets — reducing reliance on periodic manual inspections."
+      },
+      "erbessd": {
+        "name": "Erbessd Instruments",
+        "role": "Diagnostics",
+        "layer": "Diagnostics Layer",
+        "tagline": "Advanced Machine Health Diagnostics",
+        "description": "Understanding machine condition is essential to predicting failures. Through our collaboration with Erbessd Instruments, Indusnov Solutions integrates advanced vibration analysis and condition monitoring technologies.",
+        "details": "Wireless vibration sensors continuously analyze machine behavior, capturing detailed diagnostic information such as FFT spectra and waveform data.",
+        "benefit": "Transforms maintenance from reactive troubleshooting into continuous machine health monitoring."
+      },
+      "aveva": {
+        "name": "AVEVA",
+        "role": "Intelligence",
+        "layer": "Intelligence Layer",
+        "tagline": "Transforming Industrial Data into Operational Intelligence",
+        "description": "Data becomes valuable only when it supports decision-making. Through AVEVA technologies, Indusnov Solutions converts collected operational and diagnostic data into clear and actionable insights.",
+        "details": "AVEVA platforms enable centralized visualization of industrial performance through intuitive dashboards, analytics tools, and operational reporting systems.",
+        "benefit": "Organizations move toward fully digitalized and performance-driven maintenance operations."
+      }
+    },
+    "page": {
+      "heroTitle": "Technology",
+      "heroTitleHighlight": "Partnerships",
+      "heroSubtitle": "Powering Predictive Maintenance Through Strategic Technology Alliances — where connectivity, diagnostics, and intelligence converge.",
+      "badge": "Technology Ecosystem",
+      "backToServices": "Back to Services",
+      "introP1": "At Indusnov Solutions, predictive maintenance is not built around a single technology. It is the result of combining advanced engineering expertise with carefully selected industrial technology partners.",
+      "introP2": "Our partnership ecosystem allows us to integrate connectivity, machine diagnostics, and industrial data intelligence into one unified Industry 4.0 approach.",
+      "introP3": "Rather than providing isolated tools, Indusnov Solutions designs and deploys complete predictive maintenance environments adapted to real industrial challenges.",
+      "collaboratorsLabel": "Our Collaborators",
+      "collaboratorsTitle": "A Collaborative Technology Ecosystem",
+      "architectureLabel": "Architecture",
+      "architectureTitle": "Our Predictive Maintenance Technology Stack",
+      "architectureSubtitle": "Each layer contributes to transforming raw industrial data into maintenance decisions.",
+      "stack": {
+        "connectivity": {
+          "label": "Connectivity",
+          "sub": "Capturing Industrial Data",
+          "description": "Industrial IoT infrastructure connects assets and continuously collects operational signals directly from machines and environments.",
+          "powered": "Synox"
+        },
+        "diagnostics": {
+          "label": "Diagnostics",
+          "sub": "Understanding Machine Health",
+          "description": "Advanced condition monitoring analyzes equipment behavior and identifies early signs of mechanical degradation.",
+          "powered": "Erbessd"
+        },
+        "intelligence": {
+          "label": "Intelligence",
+          "sub": "Transforming Data into Insight",
+          "description": "Operational and diagnostic data are aggregated into visualization and analytics platforms that provide clear performance insights.",
+          "powered": "AVEVA"
+        },
+        "decision": {
+          "label": "Decision",
+          "sub": "Enabling Predictive Maintenance",
+          "description": "Engineering expertise transforms insights into maintenance strategies, intervention planning, and performance optimization actions.",
+          "powered": "Indusnov Solutions"
+        }
+      },
+      "valueLabel": "The Value",
+      "valueTitle": "Why Our Partnerships Matter",
+      "benefits": [
+        "Continuous monitoring instead of periodic inspection",
+        "Early failure detection and reduced downtime",
+        "Scalable Industry 4.0 deployment",
+        "Data-driven maintenance decision-making",
+        "Safer and more efficient industrial operations"
+      ],
+      "valueDescription": "Our partnerships ensure that every solution we deliver is built on proven technologies while remaining fully adapted to local industrial realities and operational needs.",
+      "ctaTitle": "Ready to build your predictive maintenance ecosystem?",
+      "ctaSubtitle": "Talk to our experts and discover how our technology stack can transform your operations.",
+      "ctaButton": "Contact Us"
+    }
+  },
+  "aboutUs": {
+    "section": {
+      "badge": "Who We Are",
+      "title": "A Moroccan Engineering Company",
+      "titleHighlight": "Maintenance 4.0",
+      "specializedIn": "Specialized in",
+      "descriptionP1": "Indusnov Solutions was created to support industries facing increasing operational challenges — unplanned downtime, limited visibility on asset condition, and growing performance and safety requirements.",
+      "descriptionP2": "Our approach integrates predictive maintenance methodologies, data monitoring, and intelligent inspection technologies to transform industrial data into operational decisions that improve reliability, efficiency, and sustainability.",
+      "cta": "Discover Our Story",
+      "stats": {
+        "experience": "Years of Industrial Experience",
+        "industry": "Industry Standard",
+        "results": "Results-Driven Approach"
+      }
+    },
+    "page": {
+      "heroTitle": "About Us",
+      "heroSubtitle": "Who We Are — Indusnov Solutions",
+      "backToHome": "Back to Home",
+      "whoWeAreLabel": "Who We Are",
+      "whoWeAreTitle": "Moroccan Engineering at the Heart of Maintenance 4.0",
+      "whoWeAreP1": "Indusnov Solutions is a Moroccan engineering company specialized in Maintenance 4.0, intelligent inspection, and industrial asset performance. Recently established, the company was created to support industries facing increasing operational challenges such as unplanned downtime, limited visibility on asset condition, and growing performance and safety requirements.",
+      "whoWeAreP2": "By combining engineering expertise with advanced technologies, Indusnov Solutions helps organizations transition toward predictive, secure, and results-driven maintenance. Our approach integrates predictive maintenance methodologies, data monitoring, and intelligent inspection technologies to transform industrial data into operational decisions that improve reliability, efficiency, and sustainability.",
+      "stats": {
+        "experience": "Years Experience",
+        "industry": "Industry Standard",
+        "results": "Results-Driven"
+      },
+      "missionLabel": "Our Mission",
+      "missionTitle": "Transforming Data into Operational Decisions",
+      "missionP1": "Our mission is to transform industrial data into actionable operational decisions. We support our clients in enhancing the reliability, performance, and sustainability of their assets while ensuring operational continuity and effective risk management.",
+      "missionP2": "Through predictive maintenance and Industry 4.0 technologies, we help industries anticipate failures, optimize maintenance strategies, and improve overall operational performance.",
+      "visionLabel": "Our Vision",
+      "visionTitle": "Replacing Reaction with Anticipation",
+      "visionP1": "Indusnov Solutions aims to become a trusted integrator of intelligent inspection and Industry 4.0 maintenance solutions across Morocco and Africa, contributing to an industry that is safer, more reliable, and more sustainable.",
+      "visionP2": "We aspire to strengthen industrial sovereignty by developing technological expertise adapted to regional industrial realities while aligned with international standards.",
+      "valuesLabel": "What Drives Us",
+      "valuesTitle": "Our Core Values",
+      "values": {
+        "innovation": {
+          "title": "Innovation",
+          "description": "We leverage advanced technologies and continuously innovate to redefine industrial maintenance and inspection standards."
+        },
+        "reliability": {
+          "title": "Reliability",
+          "description": "Precision, rigor, and engineering excellence guide every project we deliver, ensuring measurable and sustainable results."
+        },
+        "safety": {
+          "title": "Safety",
+          "description": "We prioritize solutions that reduce human exposure to risk while improving the safety and resilience of industrial infrastructures."
+        },
+        "performance": {
+          "title": "Performance",
+          "description": "Our objective is to generate tangible operational value by improving asset availability, reducing downtime, and optimizing industrial efficiency."
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "description": "We build long-term partnerships with our clients and technology partners, working together to solve complex industrial challenges."
+        }
+      },
+      "leadershipLabel": "Leadership",
+      "leadershipTitle": "Meet Our CEO",
+      "ceoName": "Said Tahiri",
+      "ceoRole": "Founder & CEO",
+      "ceoP1": "Said Tahiri, Founder and CEO of Indusnov Solutions, brings nearly 29 years of industrial experience across sectors including mechanical manufacturing, naval repair, aeronautics, and automotive industries.",
+      "ceoP2": "This experience led him to found Indusnov Solutions with the ambition of accelerating the adoption of predictive maintenance and Industry 4.0 technologies in Morocco and across Africa.",
+      "ceoHighlights": [
+        "Nearly 29 years of industrial experience",
+        "Expertise across mechanical manufacturing, naval repair, aeronautics, and automotive industries",
+        "Pioneer of Maintenance 4.0 adoption in Morocco and Africa",
+        "Specialist in vibration analysis, thermography, ultrasonic detection, and drone inspection"
+      ],
+      "ctaTitle": "Ready to work with us?",
+      "ctaSubtitle": "Discover how our expertise can transform your industrial operations.",
+      "ctaServices": "Explore Our Services",
+      "ctaContact": "Contact Us"
+    }
+  },
+  "servicesPage": {
+    "badge": "Industrial Solutions",
+    "heroTitle": "Our",
+    "heroTitleHighlight": "Services",
+    "heroSubtitle": "Industry 4.0 & Industrial Maintenance Solutions — engineered for performance.",
+    "stats": {
+      "services": "Services",
+      "projects": "Projects",
+      "satisfaction": "Satisfaction"
+    },
+    "sectionLabel": "What we offer",
+    "sectionTitle": "End-to-End Industrial Expertise",
+    "keyAdvantages": "Key Advantages",
+    "learnMore": "Learn More",
+    "ctaTitle": "Ready to transform your operations?",
+    "ctaSubtitle": "Talk to our experts and get a tailored solution.",
+    "ctaButton": "Get in Touch"
+  },
   "services": {
     "title": "Our Services",
     "subtitle": "Complete industrial solutions for all your needs",
@@ -187,5 +374,74 @@
       "For a quote, please use our contact form.",
       "Our offices are open Monday to Friday, 8am-6pm."
     ]
+  },
+  "servicesSection": {
+    "title": "Our",
+    "titleHighlight": "Services",
+    "subtitle": "Innovative solutions to optimize your industrial operations",
+    "viewDetails": "View details",
+    "ctaTitle": "Do you have a specific project?",
+    "ctaSubtitle": "Our experts are available to discuss your needs and offer the right solution",
+    "ctaButton": "Contact us",
+    "services": [
+      {
+        "id": "drontech",
+        "title": "DronTech",
+        "shortDesc": "Drone inspection.",
+        "fullDesc": "DronTech provides comprehensive drone inspections for your industrial facilities and buildings. Drones capture high-resolution images and provide detailed reports to facilitate maintenance and safety.",
+        "objectives": ["Fast inspection", "Early problem detection", "Maintenance optimization"],
+        "benefits": ["Time savings", "Cost reduction", "Enhanced safety"],
+        "features": ["Fast", "Accurate", "Improved safety"]
+      },
+      {
+        "id": "aquascope",
+        "title": "AquaScope",
+        "shortDesc": "Underwater inspection.",
+        "fullDesc": "AquaScope performs detailed underwater inspections for port infrastructure and aquatic installations. Our equipment enables precise control even in hard-to-reach areas.",
+        "objectives": ["Underwater surveillance", "Leak or corrosion detection", "Proactive maintenance"],
+        "benefits": ["Accident prevention", "Optimized interventions", "Detailed reports"],
+        "features": ["High resolution", "Depth adapted", "Detailed report"]
+      },
+      {
+        "id": "ecoscan",
+        "title": "EcoScan",
+        "shortDesc": "Energy audit.",
+        "fullDesc": "EcoScan offers energy audits for businesses and buildings. We analyze your consumption, identify losses and recommend energy optimization solutions.",
+        "objectives": ["Consumption reduction", "Installation optimization", "Efficiency improvement"],
+        "benefits": ["Energy savings", "Reduced environmental impact", "Detailed report with recommendations"],
+        "features": ["Energy savings", "Complete analysis", "Practical recommendations"]
+      },
+      {
+        "id": "predictech",
+        "title": "PredicTech",
+        "shortDesc": "Predictive maintenance.",
+        "fullDesc": "PredicTech monitors your industrial machines and equipment using smart sensors and AI to prevent any breakdown or failure. Interventions are planned before any incident.",
+        "objectives": ["Continuous monitoring", "Breakdown prevention", "Machine lifecycle optimization"],
+        "benefits": ["Reduced downtime", "Increased efficiency", "Automatic alerts"],
+        "features": ["Breakdown prevention", "Performance optimization", "Automatic alerts"]
+      },
+      {
+        "id": "skillnov",
+        "title": "SkilNov",
+        "shortDesc": "Technical training.",
+        "fullDesc": "SkilNov offers technical training and professional certifications for your employees. Our programs are adapted to the specific needs of each industrial sector.",
+        "objectives": ["Practical training", "Recognized certification", "Skills development"],
+        "benefits": ["Qualified employees", "Improved productivity", "Rapid upskilling"],
+        "features": ["Expert trainers", "Practical courses", "Recognized certifications"]
+      },
+      {
+        "id": "smartflow",
+        "title": "SmartFlow",
+        "shortDesc": "Industrial automation.",
+        "fullDesc": "SmartFlow optimizes your industrial processes through intelligent automation. Our solutions reduce errors, improve quality and track performance in real time.",
+        "objectives": ["Process automation", "Quality control", "Real-time monitoring"],
+        "benefits": ["Increased efficiency", "Reduced errors", "Time savings"],
+        "features": ["Increased efficiency", "Reduced errors", "Real-time monitoring"]
+      }
+    ]
+  },
+  "clients": {
+    "title": "Our Clients",
+    "subtitle": "They trust us"
   }
 }

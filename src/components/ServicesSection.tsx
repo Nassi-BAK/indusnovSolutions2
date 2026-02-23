@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 import drontech from '../assets/services/drontech.png';
 import aquascope from '../assets/services/aquascope.png';
 import ecoscan from '../assets/services/ecoscan.png';
@@ -26,71 +27,7 @@ interface ServiceItem {
   objectives: string[];
   benefits: string[];
   features: string[];
-  image: string;
 }
-
-const services: ServiceItem[] = [
-  {
-    id: 'drontech',
-    title: 'DronTech',
-    shortDesc: 'Inspection par drone.',
-    fullDesc: 'DronTech fournit des inspections complètes par drone pour vos installations industrielles et bâtiments. Les drones capturent des images haute résolution et fournissent des rapports détaillés pour faciliter la maintenance et la sécurité.',
-    objectives: ['Inspection rapide', 'Détection précoce des problèmes', 'Optimisation de la maintenance'],
-    benefits: ['Gain de temps', 'Réduction des coûts', 'Sécurité renforcée'],
-    features: ['Rapide', 'Précis', 'Sécurité améliorée'],
-    image: drontech,
-  },
-  {
-    id: 'aquascope',
-    title: 'AquaScope',
-    shortDesc: 'Inspection sous-marine.',
-    fullDesc: 'AquaScope réalise des inspections sous-marines détaillées pour les infrastructures portuaires et installations aquatiques. Nos équipements permettent un contrôle précis même dans les zones difficiles d\'accès.',
-    objectives: ['Surveillance sous-marine', 'Détection de fuites ou corrosion', 'Maintenance proactive'],
-    benefits: ['Prévention des accidents', 'Optimisation des interventions', 'Rapports détaillés'],
-    features: ['Haute résolution', 'Adapté aux profondeurs', 'Rapport détaillé'],
-    image: aquascope,
-  },
-  {
-    id: 'ecoscan',
-    title: 'EcoScan',
-    shortDesc: 'Audit énergétique.',
-    fullDesc: 'EcoScan propose des audits énergétiques pour entreprises et bâtiments. Nous analysons vos consommations, identifions les pertes et recommandons des solutions d\'optimisation énergétique.',
-    objectives: ['Réduction de consommation', 'Optimisation des installations', 'Amélioration de l\'efficacité'],
-    benefits: ['Économies d\'énergie', 'Impact environnemental réduit', 'Rapport détaillé avec recommandations'],
-    features: ['Économie d\'énergie', 'Analyse complète', 'Recommandations pratiques'],
-    image: ecoscan,
-  },
-  {
-    id: 'predictech',
-    title: 'PredicTech',
-    shortDesc: 'Maintenance prédictive.',
-    fullDesc: 'PredicTech surveille vos machines et équipements industriels grâce à des capteurs intelligents et l\'IA pour prévenir toute panne ou défaillance. Les interventions sont planifiées avant tout incident.',
-    objectives: ['Surveillance continue', 'Prévention des pannes', 'Optimisation du cycle de vie des machines'],
-    benefits: ['Réduction des temps d\'arrêt', 'Efficacité accrue', 'Alertes automatiques'],
-    features: ['Prévention des pannes', 'Optimisation des performances', 'Alertes automatiques'],
-    image: predictech,
-  },
-  {
-    id: 'skillnov',
-    title: 'SkilNov',
-    shortDesc: 'Formation technique.',
-    fullDesc: 'SkilNov offre des formations techniques et certifications professionnelles pour vos employés. Nos programmes sont adaptés aux besoins spécifiques de chaque secteur industriel.',
-    objectives: ['Formation pratique', 'Certification reconnue', 'Développement des compétences'],
-    benefits: ['Employés qualifiés', 'Amélioration de la productivité', 'Montée en compétence rapide'],
-    features: ['Formateurs experts', 'Cours pratiques', 'Certifications reconnues'],
-    image: skillnov,
-  },
-  {
-    id: 'smartflow',
-    title: 'SmartFlow',
-    shortDesc: 'Automatisation industrielle.',
-    fullDesc: 'SmartFlow optimise vos processus industriels grâce à l\'automatisation intelligente. Nos solutions permettent de réduire les erreurs, améliorer la qualité et suivre les performances en temps réel.',
-    objectives: ['Automatisation des processus', 'Contrôle qualité', 'Suivi en temps réel'],
-    benefits: ['Efficacité accrue', 'Réduction des erreurs', 'Gain de temps'],
-    features: ['Efficacité accrue', 'Réduction des erreurs', 'Suivi en temps réel'],
-    image: smartflow,
-  },
-];
 
 // Icônes SVG en ligne pour remplacer Heroicons
 const Icons = {
@@ -109,6 +46,11 @@ const Icons = {
 const ServicesSectionWithPopup = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  
+  const services: ServiceItem[] = (t('servicesSection.services', { returnObjects: true }) as ServiceItem[]).map((service: ServiceItem) => ({
+    ...service,
+  }));
 
   return (
     <section id="services" className="bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32">
@@ -121,10 +63,10 @@ const ServicesSectionWithPopup = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Nos <span className="text-orange-500">Services</span>
+            {t('servicesSection.title')} <span className="text-orange-500">{t('servicesSection.titleHighlight')}</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Des solutions innovantes pour optimiser vos opérations industrielles
+            {t('servicesSection.subtitle')}
           </p>
         </motion.div>
 
@@ -180,7 +122,7 @@ const ServicesSectionWithPopup = () => {
                     onClick={() => navigate(`/services/${service.id}`)}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
-                    <span>Voir détails</span>
+                    <span>{t('servicesSection.viewDetails')}</span>
                     <Icons.ArrowRight />
                   </button>
                 </div>
@@ -199,10 +141,10 @@ const ServicesSectionWithPopup = () => {
         >
           <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Vous avez un projet spécifique ?
+              {t('servicesSection.ctaTitle')}
             </h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Nos experts sont disponibles pour discuter de vos besoins et vous proposer la solution adaptée
+              {t('servicesSection.ctaSubtitle')}
             </p>
             <ScrollLink
               to="contact"
@@ -210,7 +152,7 @@ const ServicesSectionWithPopup = () => {
               duration={500}
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
             >
-              <span>Contactez-nous</span>
+              <span>{t('servicesSection.ctaButton')}</span>
               <Icons.ArrowRight />
             </ScrollLink>
           </div>

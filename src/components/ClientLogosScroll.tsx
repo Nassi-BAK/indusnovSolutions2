@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import akwa from '../assets/costumer/akwa.png';
 import arcelor from '../assets/costumer/arcelor.png';
 import atlasonline from '../assets/costumer/atlasonline.png';
@@ -31,11 +32,34 @@ const clientLogos = [
 ];
 
 const ClientLogosScroll = () => {
+  const { t } = useTranslation();
   // Dupliquer les logos pour créer un effet infini
   const duplicatedLogos = [...clientLogos, ...clientLogos, ...clientLogos];
 
   return (
     <section className="relative overflow-hidden bg-white py-16 lg:py-20">
+      {/* Titre et sous-titre */}
+      <div className="mb-16 text-center px-4 sm:px-6 lg:px-8">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+        >
+          {t('clients.title')}
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-xl lg:text-2xl text-gray-600 font-light"
+        >
+          {t('clients.subtitle')}
+        </motion.p>
+      </div>
+
       {/* Conteneur du carousel */}
       <div className="relative mx-auto max-w-7xl">
         {/* Gradient overlay gauche */}
