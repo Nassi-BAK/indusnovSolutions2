@@ -463,7 +463,7 @@ const TechnologyPartnerships = () => {
                 {t('technologyPartnerships.page.ctaSubtitle')}
               </p>
               <Link
-                to="/contact"
+                to="/#contact"
                 className="inline-flex items-center gap-2 bg-white text-orange-600 hover:bg-orange-50 font-black px-8 py-3.5 rounded-xl transition-colors text-sm"
               >
                 {t('technologyPartnerships.page.ctaButton')} <ExternalLink className="w-4 h-4" />

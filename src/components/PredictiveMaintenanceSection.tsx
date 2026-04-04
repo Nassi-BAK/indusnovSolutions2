@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const PredictiveMaintenanceSection = () => {
+  const { t } = useTranslation();
+  
   const features = [
-    'Advanced Condition Monitoring',
-    'Industrial IoT Integration',
-    'Intelligent Inspections',
-    'Data-Driven Engineering',
-    'Continuous Asset Monitoring',
-    'Strategic Performance Management'
+    t('predictiveMaintenanceSection.features.conditionMonitoring'),
+    t('predictiveMaintenanceSection.features.iotIntegration'),
+    t('predictiveMaintenanceSection.features.intelligentInspections'),
+    t('predictiveMaintenanceSection.features.dataEngineering'),
+    t('predictiveMaintenanceSection.features.assetMonitoring'),
+    t('predictiveMaintenanceSection.features.performanceManagement')
   ];
 
   return (
@@ -31,17 +34,17 @@ const PredictiveMaintenanceSection = () => {
           >
             <div className="mb-6">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                Predictive Maintenance & Industry 4.0
+                {t('predictiveMaintenanceSection.title')}
               </h2>
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full" />
             </div>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              At Indusnov Solutions, predictive maintenance is at the core of everything we do. We combine advanced condition monitoring, industrial IoT, intelligent inspections, and data-driven engineering to help industries anticipate failures before they occur.
+              {t('predictiveMaintenanceSection.descriptionP1')}
             </p>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              By integrating multiple Industry 4.0 technologies into a unified approach, we enable continuous asset monitoring, improved reliability, and safer, more efficient operations, transforming maintenance from reactive intervention into strategic performance management.
+              {t('predictiveMaintenanceSection.descriptionP2')}
             </p>
 
             {/* CTA Button */}
@@ -49,7 +52,7 @@ const PredictiveMaintenanceSection = () => {
               to="/services"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 group"
             >
-              Explore Our Solutions
+              {t('predictiveMaintenanceSection.cta')}
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>

@@ -8,10 +8,11 @@ import Chatbot from '@/components/Chatbot';
 import { getServiceById, servicesData } from '@/data/servicesData';
 import servicesEn from '@/i18n/services.en.json';
 import servicesFr from '@/i18n/services.fr.json';
+import drontechback from '@/assets/drontechback.png';
 
 const ServiceDetail = () => {
   const params = useParams<{ serviceId?: string }>();
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const navigate = useNavigate();
   const serviceId = params.serviceId?.toLowerCase();
 
@@ -35,7 +36,7 @@ const ServiceDetail = () => {
   if (!serviceId) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <h1 className="text-4xl font-bold">Service not found</h1>
+        <h1 className="text-4xl font-bold">{t('serviceDetail.notFound')}</h1>
       </div>
     );
   }
@@ -47,9 +48,9 @@ const ServiceDetail = () => {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
-          <h1 className="mb-4 text-4xl font-bold">Service not found</h1>
+          <h1 className="mb-4 text-4xl font-bold">{t('serviceDetail.notFound')}</h1>
           <Link to="/" className="text-primary hover:underline">
-            Return home
+            {t('serviceDetail.returnHome')}
           </Link>
         </div>
       </div>
@@ -68,17 +69,13 @@ const ServiceDetail = () => {
       <section className="relative min-h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950">
         {/* Background avec image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-          style={{ backgroundImage: `url(${service.image})` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{ backgroundImage: serviceId === 'drontech' ? `url(${drontechback})` : `url(${service.image})` }}
         />
-        
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/98 via-slate-800/95 to-slate-900/98" />
         
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-orange-500/15 blur-3xl animate-pulse" />
-          <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
 
         {/* Content */}
@@ -96,7 +93,7 @@ const ServiceDetail = () => {
                 >
                   <ArrowLeft className="h-5 w-5" />
                   <span className="font-medium text-sm uppercase tracking-wider">
-                    Back to Services
+                    {t('serviceDetail.backToServices')}
                   </span>
                 </Link>
 

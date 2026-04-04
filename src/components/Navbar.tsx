@@ -44,6 +44,8 @@ const Navbar = () => {
   const navLinks = [
     { to: '/', label: t('nav.home') },
     { to: '/#about', label: t('nav.about') },
+    { to: '/#partnerships', label: t('nav.partnerships') },
+    { to: '/#clients', label: t('nav.clients') },
     { to: '/#services', label: t('nav.services') },
     { to: '/#contact', label: t('nav.contact') },
   ];
@@ -133,7 +135,7 @@ const Navbar = () => {
                           onClick={() => setIsServicesDropdownOpen(false)}
                           className="flex items-center justify-between gap-2 px-4 py-3 bg-orange-500 text-white text-sm font-semibold transition-colors duration-200 hover:bg-orange-600 group"
                         >
-                          <span>{t('nav.allServices') || 'Voir tous les services'}</span>
+                          <span>{t('nav.allServices')}</span>
                           <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                         </Link>
                       </motion.div>
@@ -263,7 +265,7 @@ const Navbar = () => {
                             }}
                             className="flex items-center justify-between gap-2 px-4 py-3 bg-orange-500 text-white text-sm font-semibold transition-colors duration-200 hover:bg-orange-600 group"
                           >
-                            <span>{t('nav.allServices') || 'Voir tous les services'}</span>
+                            <span>{t('nav.allServices')}</span>
                             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                           </Link>
                         </motion.div>

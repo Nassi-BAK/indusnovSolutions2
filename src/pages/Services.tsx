@@ -325,7 +325,7 @@ const Services = () => {
             </h2>
             <p className="text-gray-400 mb-8">{t('servicesPage.ctaSubtitle')}</p>
             <Link
-              to="/contact"
+              to="/#contact"
               className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold px-8 py-3.5 rounded-xl transition-colors duration-200 text-sm"
             >
               {t('servicesPage.ctaButton')} <ArrowRight className="h-4 w-4" />

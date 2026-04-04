@@ -16,12 +16,24 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroCarousel />
-        <PredictiveMaintenanceSection />
-        <TechnologyPartnershipsSection />
-        <AboutUsSection />
-        <ClientLogosScroll />
-        
-        <ContactSection />
+        <div id="maintenance">
+          <PredictiveMaintenanceSection />
+        </div>
+        <div id="partnerships">
+          <TechnologyPartnershipsSection />
+        </div>
+        <div id="about">
+          <AboutUsSection />
+        </div>
+        <div id="clients">
+          <ClientLogosScroll />
+        </div>
+        <div id="services">
+          <ServicesSection />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
       </main>
       <Footer />
       <Chatbot />

@@ -1,11 +1,15 @@
 {
   "nav": {
     "home": "Accueil",
+    "maintenance": "Maintenance",
+    "partnerships": "Partenariats",
     "about": "À Propos",
+    "clients": "Clients",
     "services": "Services",
     "portfolio": "Réalisations",
     "testimonials": "Témoignages",
-    "contact": "Contact"
+    "contact": "Contact",
+    "allServices": "Voir tous les services"
   },
   "hero": {
     "slides": [
@@ -443,5 +447,41 @@
   "clients": {
     "title": "Nos Clients",
     "subtitle": "Ils nous font confiance"
+  },
+  "predictiveMaintenanceSection": {
+    "title": "Maintenance Prédictive et Industrie 4.0",
+    "descriptionP1": "Chez Indusnov Solutions, la maintenance prédictive est au cœur de tout ce que nous faisons. Nous combinons la surveillance avancée des conditions, l'IoT industriel, les inspections intelligentes et l'ingénierie axée sur les données pour aider les industries à anticiper les défaillances avant qu'elles ne se produisent.",
+    "descriptionP2": "En intégrant plusieurs technologies de l'Industrie 4.0 dans une approche unifiée, nous permettons une surveillance continue des actifs, une fiabilité améliorée et des opérations plus sûres et plus efficaces, transformant la maintenance d'une intervention réactive en gestion stratégique de la performance.",
+    "cta": "Explorer Nos Solutions",
+    "features": {
+      "conditionMonitoring": "Surveillance Avancée des Conditions",
+      "iotIntegration": "Intégration IoT Industrielle",
+      "intelligentInspections": "Inspections Intelligentes",
+      "dataEngineering": "Ingénierie Axée sur les Données",
+      "assetMonitoring": "Surveillance Continue des Actifs",
+      "performanceManagement": "Gestion Stratégique des Performances"
+    }
+  },
+  "serviceDetail": {
+    "notFound": "Service non trouvé",
+    "returnHome": "Retour à l'accueil",
+    "backToServices": "Retour aux Services",
+    "quote": "Demander un devis"
+  },
+  "contactInfo": {
+    "address": "Technopark, Casablanca, Maroc",
+    "phones": ["+212 661-185357", "+212 522-750707"],
+    "email": "contact@indusnov.com",
+    "hours": "Lun - Ven: 8:00 - 18:00"
+  },
+  "portfolio": {
+    "items": {
+      "aerospaceStructure": "Structure Aérospatiale",
+      "precisionParts": "Pièces de Précision",
+      "metalFramework": "Charpente Métallique",
+      "robotizedLine": "Chaîne Robotisée",
+      "stainlessSteelWeld": "Soudure Acier Inoxydable",
+      "industrialBuilding": "Bâtiment Industriel"
+    }
   }
 }

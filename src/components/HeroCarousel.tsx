@@ -90,7 +90,7 @@ const HeroCarousel = () => {
 	};
 
 	return (
-		<section className="relative h-screen w-full overflow-hidden bg-slate-950">
+		<section className="relative h-96 sm:h-[420px] lg:h-[500px] w-full overflow-hidden bg-slate-950">
 			{/* Image de fond avec overlay */}
 			<AnimatePresence initial={false} custom={direction}>
 				<motion.div
@@ -136,11 +136,11 @@ const HeroCarousel = () => {
 								initial={{ opacity: 0, scale: 0.8 }}
 								animate={{ opacity: 1, scale: 1 }}
 								transition={{ delay: 0.2 }}
-								className="mb-6 inline-flex items-center gap-3"
+								className="mb-3 inline-flex items-center gap-3"
 							>
-								<div className="flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 backdrop-blur-sm">
+								<div className="flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1.5 backdrop-blur-sm">
 									<div className="h-2 w-2 animate-pulse rounded-full bg-orange-500" />
-									<span className="text-sm font-medium text-orange-400">
+									<span className="text-xs font-medium text-orange-400">
 										{String(currentSlide + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}
 									</span>
 								</div>
@@ -151,7 +151,7 @@ const HeroCarousel = () => {
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 0.3, duration: 0.6 }}
-								className="mb-6 text-5xl font-bold leading-tight text-white lg:text-7xl"
+								className="mb-4 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl"
 							>
 								{t(currentSlideData.titleKey).split(' ').map((word, i) => (
 									<motion.span
@@ -171,7 +171,7 @@ const HeroCarousel = () => {
 								initial={{ width: 0 }}
 								animate={{ width: 120 }}
 								transition={{ delay: 0.5, duration: 0.8 }}
-								className="mb-8 h-1 bg-gradient-to-r from-orange-500 to-orange-600"
+								className="mb-5 h-1 bg-gradient-to-r from-orange-500 to-orange-600"
 							/>
 
 							{/* Sous-titre */}
@@ -179,7 +179,7 @@ const HeroCarousel = () => {
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								transition={{ delay: 0.6 }}
-								className="mb-10 max-w-2xl text-lg leading-relaxed text-slate-300 lg:text-xl"
+								className="mb-6 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base lg:text-lg"
 							>
 								{t(currentSlideData.subtitleKey)}
 							</motion.p>
@@ -197,7 +197,7 @@ const HeroCarousel = () => {
 									transition={{ delay: 0.7 }}
 									whileHover={{ scale: 1.05 }}
 									whileTap={{ scale: 0.95 }}
-									className="group relative overflow-hidden rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 font-semibold text-white shadow-lg shadow-orange-500/30 transition-all hover:shadow-xl hover:shadow-orange-500/40"
+									className="group relative overflow-hidden rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/30 transition-all hover:shadow-xl hover:shadow-orange-500/40"
 								>
 									<span className="relative z-10 flex items-center gap-2">
 										{t(currentSlideData.ctaTextKey)}

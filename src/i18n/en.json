@@ -1,11 +1,15 @@
 {
   "nav": {
     "home": "Home",
+    "maintenance": "Maintenance",
+    "partnerships": "Partnerships",
     "about": "About",
+    "clients": "Clients",
     "services": "Services",
     "portfolio": "Portfolio",
     "testimonials": "Testimonials",
-    "contact": "Contact"
+    "contact": "Contact",
+    "allServices": "See all services"
   },
   "hero": {
     "slides": [
@@ -443,5 +447,41 @@
   "clients": {
     "title": "Our Clients",
     "subtitle": "They trust us"
+  },
+  "predictiveMaintenanceSection": {
+    "title": "Predictive Maintenance & Industry 4.0",
+    "descriptionP1": "At Indusnov Solutions, predictive maintenance is at the core of everything we do. We combine advanced condition monitoring, industrial IoT, intelligent inspections, and data-driven engineering to help industries anticipate failures before they occur.",
+    "descriptionP2": "By integrating multiple Industry 4.0 technologies into a unified approach, we enable continuous asset monitoring, improved reliability, and safer, more efficient operations, transforming maintenance from reactive intervention into strategic performance management.",
+    "cta": "Explore Our Solutions",
+    "features": {
+      "conditionMonitoring": "Advanced Condition Monitoring",
+      "iotIntegration": "Industrial IoT Integration",
+      "intelligentInspections": "Intelligent Inspections",
+      "dataEngineering": "Data-Driven Engineering",
+      "assetMonitoring": "Continuous Asset Monitoring",
+      "performanceManagement": "Strategic Performance Management"
+    }
+  },
+  "serviceDetail": {
+    "notFound": "Service not found",
+    "returnHome": "Return home",
+    "backToServices": "Back to Services",
+    "quote": "Request a Quote"
+  },
+  "contactInfo": {
+    "address": "Technopark, Casablanca, Morocco",
+    "phones": ["+212 661-185357", "+212 522-750707"],
+    "email": "contact@indusnov.com",
+    "hours": "Mon - Fri: 8:00 AM - 6:00 PM"
+  },
+  "portfolio": {
+    "items": {
+      "aerospaceStructure": "Aerospace Structure",
+      "precisionParts": "Precision Parts",
+      "metalFramework": "Metal Framework",
+      "robotizedLine": "Robotized Line",
+      "stainlessSteelWeld": "Stainless Steel Weld",
+      "industrialBuilding": "Industrial Building"
+    }
   }
 }
